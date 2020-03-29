@@ -61,6 +61,9 @@ npm install --save passport passport-google-oauth20
   - Search for `oauth` when enabling the API, but this seems to be deprecated, so we can search for google+ API.
   - Click on `Google+ API`, and there you are going to see `oauth` option. We need `enable` it.
   - Enable the API is not enough, we will also need create credentials. So press on `create credentials` and choose the option `oauth client ID`.
+  - Product name shown to users: `emaily-dev`
+  - authorized javascript origins: http://localhost:5000
+  - authorized redirect URIs: http://localhost:5000/*
 
 
 
