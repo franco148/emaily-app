@@ -66,7 +66,9 @@ npm install --save passport passport-google-oauth20
   - authorized redirect URIs: http://localhost:5000/*
 4. We may get `redirect_uri_mismatch` error when testing the google auth. But it is because the redict URI. We will only need to update it to `/auth/google/callback`
 
-
+##### Installing tools
+- npm install --save nodemon
+  - Once installed nodemon, we can start the application with `npm run dev` where `dev` was defined in the scripts section of package.json.
 
 
 
