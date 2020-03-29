@@ -55,6 +55,12 @@ heroku logs --app <app-name>
 ```bash
 npm install --save passport passport-google-oauth20
 ```
+3. Create a google application in developers section: https://console.developers.google.com/
+  - In this case: emaily-dev
+  - Enable it: Click on `enable API`
+  - Search for `oauth` when enabling the API, but this seems to be deprecated, so we can search for google+ API.
+  - Click on `Google+ API`, and there you are going to see `oauth` option. We need `enable` it.
+  - Enable the API is not enough, we will also need create credentials. So press on `create credentials` and choose the option `oauth client ID`.
 
 
 
