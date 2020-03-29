@@ -50,8 +50,11 @@ heroku logs --app <app-name>
 ```
 
 ##### Nodejs-Google-Auth
-- passportjs.org: for mananging the payments.
-
+1. passportjs.org: for mananging the authentication with third party services.
+2. Passport installation
+```bash
+npm install --save passport passport-google-oauth20
+```
 
 
 
