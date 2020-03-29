@@ -64,6 +64,8 @@ npm install --save passport passport-google-oauth20
   - Product name shown to users: `emaily-dev`
   - authorized javascript origins: http://localhost:5000
   - authorized redirect URIs: http://localhost:5000/*
+4. We may get `redirect_uri_mismatch` error when testing the google auth. But it is because the redict URI. We will only need to update it to `/auth/google/callback`
+
 
 
 
