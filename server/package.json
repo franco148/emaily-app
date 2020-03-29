@@ -1,18 +1,22 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "Feedback collector application",
-  "main": "index.js",
-  "engines": {
-    "node": "8.9.4",
-    "npm": "5.6.0"
-  },
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "franco.fral",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Feedback collector application",
+    "main": "index.js",
+    "engines": {
+        "node": "10.12.0",
+        "npm": "6.4.1"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "author": "franco.fral",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.2",
+        "nodemon": "^2.0.2",
+        "passport": "^0.4.1",
+        "passport-google-oauth20": "^2.0.0"
+    }
 }
