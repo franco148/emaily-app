@@ -43,7 +43,14 @@ heroku logs
 # or
 heroku logs --app <app-name>
 
+
+# What about the following changes??? New deployment...
+# we just need to commit and push the new changes, it will be automatically re-deployed.
+
 ```
+
+##### Nodejs-Google-Auth
+- passportjs.org: for mananging the payments.
 
 
 
