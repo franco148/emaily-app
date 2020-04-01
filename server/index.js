@@ -4,6 +4,7 @@ const keys = require('./config/keys');
 
 require('./services/passport');
 // const authRoutes = require('./routes/authRoutes'); // Approach 1
+require('./models/User');
 
 mongoose.connect(keys.mongoURI)
 
