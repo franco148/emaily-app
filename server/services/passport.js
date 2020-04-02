@@ -14,6 +14,18 @@ passport.use(new GoogleStrategy({
     // console.log('access token', accessToken);
     // console.log('refresh token', refreshToken);
     // console.log('profile', profile);
-    console.log('Go to save the user got from Google Account...');
-    new User({ googleId: profile.id }).save();
+    User.findOne({ googleId: profile.id })
+        .then((existingUser) => {
+            if (!existingUser) {
+                console.log('Go to save the user got from Google Account...');
+                new User({ googleId: profile.id })
+                    .save()
+                    .then(user => done(null, user));
+            } else {
+                console.log('User is already registered...');
+                // done receives the error as a first argument
+                done(null, existingUser);
+            }
+        });
+
 }));
