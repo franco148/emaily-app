@@ -70,8 +70,7 @@ npm install --save passport passport-google-oauth20
 - npm install --save nodemon
   - Once installed nodemon, we can start the application with `npm run dev` where `dev` was defined in the scripts section of package.json.
 - npm install --save mongoose
-
-
+- npm install --save cookie-session
 
 
 
