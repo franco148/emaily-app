@@ -30,8 +30,9 @@ const app = express();
 // authRoutes(app); // Approach 1
 // require('./routes/authRoutes')(app); // Approach 2
 
-app.get('/', (req, res) => {
-    res.send({ hi: 'How are you doing there!' });
+app.get('/google87bec35cc2913a9b.html', (req, res) => {
+    //res.send({ hi: 'How are you doing there!' });
+    res.sendfile('google87bec35cc2913a9b.html');
 });
 
 const PORT = process.env.PORT || 5000;
