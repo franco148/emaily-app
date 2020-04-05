@@ -72,6 +72,8 @@ npm install --save passport passport-google-oauth20
 - npm install --save mongoose
 - npm install --save cookie-session
 
+- npm install --save concurrently
+
 ##### Important Heroku Commands
 - heroku open: It will give us the address we need to use in google developer console.
 
@@ -85,7 +87,8 @@ npm install --save passport passport-google-oauth20
 
 #### Moving to the client side
 ##### Create a react app
-`npx create-react-app <app-name>`
+- First we will need to install the required tools for creating a react app. `sudo npm install -g create-react-app`
+- Comand for creating a new app. `npx create-react-app <app-name>`
 
 
 
