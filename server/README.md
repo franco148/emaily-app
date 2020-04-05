@@ -72,11 +72,15 @@ npm install --save passport passport-google-oauth20
 - npm install --save mongoose
 - npm install --save cookie-session
 
+##### Important Heroku Commands
+- heroku open: It will give us the address we need to use in google developer console.
 
 
-
-
-
+##### Google authentication from Heroku deployed app
+- We may get an error called `redirect_uri_mismatch`, it is due to http vs https
+- It basically is specified in passport.js file in `GoogleStrategy` configuration.
+  - One solution would be add the entire address
+  - Another solution solve something regarding to heroku proxy. (add to GoogleStrategy `proxy: true`) 
 
 
 
