@@ -83,4 +83,12 @@ npm install --save passport passport-google-oauth20
   - Another solution solve something regarding to heroku proxy. (add to GoogleStrategy `proxy: true`) 
 
 
+#### Moving to the client side
+##### Create a react app
+`npx create-react-app <app-name>`
+
+
+
+
+
 
