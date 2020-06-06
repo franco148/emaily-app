@@ -11,17 +11,17 @@ require('./services/passport');
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        console.log('Emaily service has connected to MongoDB Cluster successfuly...');
+      console.log('Emaily service has connected to MongoDB Cluster successfuly...');
     })
     .catch(error => {
-        console.log('Something bad ocurred: ', error);
+      console.log('Something bad ocurred: ', error);
     });
 
 const app = express();
 app.use(
     cookieSession({
-        maxAge: 30 * 24 * 60 * 60 * 1000,
-        keys: [keys.cookieKey]
+      maxAge: 30 * 24 * 60 * 60 * 1000,
+      keys: [keys.cookieKey]
     })
 );
 app.use(passport.initialize());
