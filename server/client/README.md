@@ -116,6 +116,9 @@ package.json with a configuration previous adding setupProxy.js
 }
 ```
 
+##### Required dependencies
+- `npm install --save redux react-redux react-router-dom`
+
 
 
 
