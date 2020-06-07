@@ -11,7 +11,11 @@ const Landing = () => <h2>Landing</h2>
 const App = () => {
   return (
     <div>
-      Hi!! this is a react app...
+      <BrowserRouter>
+        <div>
+          <Route path="/" component={Landing}></Route>
+        </div>
+      </BrowserRouter>
     </div>
   );
 };
