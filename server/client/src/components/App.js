@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter, Route } from "react-router-dom";
 
 // My Components for reemplacin dummy ones
@@ -11,19 +11,22 @@ const SurveyNew = () => <h2>SurveyNew</h2>
 const Landing = () => <h2>Landing</h2>
 
 
-const App = () => {
-  return (
-    <div className="container">
-      <BrowserRouter>
-        <div>
-          <Header></Header>
-          <Route exact={true} path="/" component={Landing}></Route>
-          <Route exact path="/surveys" component={Dashboard}></Route>
-          <Route path="/surveys/new" component={SurveyNew}></Route>
-        </div>
-      </BrowserRouter>
-    </div>
-  );
-};
+class App extends Component {
+
+  render() {
+    return (
+      <div className="container">
+        <BrowserRouter>
+          <div>
+            <Header></Header>
+            <Route exact={true} path="/" component={Landing}></Route>
+            <Route exact path="/surveys" component={Dashboard}></Route>
+            <Route path="/surveys/new" component={SurveyNew}></Route>
+          </div>
+        </BrowserRouter>
+      </div>
+    );
+  }
+}
 
 export default App;
