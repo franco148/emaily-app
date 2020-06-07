@@ -77,41 +77,44 @@ package.json with a configuration previous adding setupProxy.js
     "version": "0.1.0",
     "private": true,
     "proxy": {
-        "/auth/google": {
-            "target": "http://localhost:5000"
-        }
+      "/auth/google": {
+        "target": "http://localhost:5000"
+      },
+      "/api/*": {
+        "target": "http://localhost:5000"
+      }
     },
     "dependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.5.0",
-        "@testing-library/user-event": "^7.2.1",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-redux": "^7.2.0",
-        "react-router-dom": "^5.1.2",
-        "react-scripts": "3.4.1",
-        "redux": "^4.0.5"
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.5.0",
+      "@testing-library/user-event": "^7.2.1",
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "react-redux": "^7.2.0",
+      "react-router-dom": "^5.1.2",
+      "react-scripts": "3.4.1",
+      "redux": "^4.0.5"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
     },
     "eslintConfig": {
-        "extends": "react-app"
+      "extends": "react-app"
     },
     "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
     }
 }
 ```
@@ -120,6 +123,7 @@ package.json with a configuration previous adding setupProxy.js
 - `npm install --save redux react-redux react-router-dom`
 
 - Third party CSS library - Materializecss.com: `npm install materialize-css@next`
+- `npm install --save axios redux-thunk`
 
 
 
