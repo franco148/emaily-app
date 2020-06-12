@@ -6,11 +6,16 @@ class Header extends Component {
   renderContent() {
     switch(this.props.auth) {
       case null:
-        return 'Still deciding';
+        // return 'Still deciding'; // To avoid the flashing (it was being displayed before changing to "I am logged in" for example)
+        return;
       case false:
-        return 'Iam loggedout';
+        // return 'Iam loggedout';
+        return (
+          <li><a href="/auth/google">Login with Google</a></li>
+        );
       default:
-        return 'I am logged in.';
+        // return 'I am logged in.';
+        return <li><a>Logout</a></li>
     }
   }
 
