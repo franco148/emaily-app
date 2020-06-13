@@ -66,3 +66,75 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## DEVELOPMENT NOTES
+##### Package.json:
+package.json with a configuration previous adding setupProxy.js
+
+```json
+{
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "proxy": {
+      "/auth/google": {
+        "target": "http://localhost:5000"
+      },
+      "/api/*": {
+        "target": "http://localhost:5000"
+      }
+    },
+    "dependencies": {
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.5.0",
+      "@testing-library/user-event": "^7.2.1",
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "react-redux": "^7.2.0",
+      "react-router-dom": "^5.1.2",
+      "react-scripts": "3.4.1",
+      "redux": "^4.0.5"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+}
+```
+
+##### Required dependencies
+- `npm install --save redux react-redux react-router-dom`
+
+- Third party CSS library - Materializecss.com: `npm install materialize-css@next`
+- `npm install --save axios redux-thunk`
+
+
+
+
+
+
+
+
+
+
+
+
+
+

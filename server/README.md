@@ -74,6 +74,9 @@ npm install --save passport passport-google-oauth20
 
 - npm install --save concurrently
 
+- Required dependencies in client side
+  - `npm install --save redux react-redux react-router-dom`
+
 ##### Important Heroku Commands
 - heroku open: It will give us the address we need to use in google developer console.
 

@@ -4,8 +4,8 @@
     "description": "Feedback collector application",
     "main": "index.js",
     "engines": {
-        "node": "10.12.0",
-        "npm": "6.4.1"
+        "node": "12.18.0",
+        "npm": "6.14.4"
     },
     "scripts": {
         "start": "node index.js",
