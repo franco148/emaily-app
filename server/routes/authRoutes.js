@@ -10,13 +10,14 @@ module.exports = app => {
     passport.authenticate('google'),
     (req, res) => {
       // Fixing the redirection issue
-      res.redirect('/surveys');
+      res.redirect('http://localhost:3000/surveys');
     }
   );
 
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.send(req.user);
+    // res.send(req.user);
+    res.redirect('/');
   });
 
   app.get('/api/current_user', (req, res) => {
