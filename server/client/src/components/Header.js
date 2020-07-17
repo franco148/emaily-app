@@ -19,8 +19,8 @@ class Header extends Component {
       default:
         // return 'I am logged in.';
         return [
-          <li><Payments></Payments></li>,
-          <li><a href="/api/logout">Logout</a></li>
+          <li key="payment1"><Payments></Payments></li>,
+          <li key="logout2"><a href="/api/logout">Logout</a></li>
         ];
     }
   }
