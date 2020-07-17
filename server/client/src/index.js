@@ -16,3 +16,6 @@ ReactDOM.render(
   <Provider store={store}><App></App></Provider>,
   document.querySelector('#root')
 );
+
+// console.log('STRIPE KEY IS', process.env.REACT_APP_STRIPE_KEY);
+// console.log('Environment is', process.env.NODE_ENV)
