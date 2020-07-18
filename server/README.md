@@ -77,6 +77,12 @@ npm install --save passport passport-google-oauth20
 - Required dependencies in client side
   - `npm install --save redux react-redux react-router-dom`
 
+- Installing dependency of stripe in backend side
+  - npm install stripe --save
+
+- Installing a tools for parsing the request payloads
+  - npm install --save body-parser
+
 ##### Important Heroku Commands
 - heroku open: It will give us the address we need to use in google developer console.
 
