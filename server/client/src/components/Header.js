@@ -20,7 +20,10 @@ class Header extends Component {
         // return 'I am logged in.';
         return [
           <li key="payment1"><Payments></Payments></li>,
-          <li key="logout2"><a href="/api/logout">Logout</a></li>
+          <li key="credit2" style={{ margin: '0 10px' }}>
+            Credits: {this.props.auth.credits}
+          </li>,
+          <li key="logout3"><a href="/api/logout">Logout</a></li>
         ];
     }
   }
