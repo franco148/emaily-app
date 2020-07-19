@@ -2,5 +2,5 @@
 node_modules/
 dev.js
 package-lock.json
-.env.development
-.env.production
+# .env.development
+# .env.production
