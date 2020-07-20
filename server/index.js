@@ -6,25 +6,26 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 // const authRoutes = require('./routes/authRoutes'); // Approach 1
 
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-      console.log('Emaily service has connected to MongoDB Cluster successfuly...');
-    })
-    .catch(error => {
-      console.log('Something bad ocurred: ', error);
-    });
+  .then(() => {
+    console.log('Emaily service has connected to MongoDB Cluster successfuly...');
+  })
+  .catch(error => {
+    console.log('Something bad ocurred: ', error);
+  });
 
 const app = express();
 app.use(bodyParser.json());
 app.use(
-    cookieSession({
-      maxAge: 30 * 24 * 60 * 60 * 1000,
-      keys: [keys.cookieKey]
-    })
+  cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    keys: [keys.cookieKey]
+  })
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -32,6 +33,7 @@ app.use(passport.session());
 // authRoutes(app); // Approach 1
 require('./routes/authRoutes')(app); // Approach 2
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   // * Express will serve up production assets like main.js file or main.css file!
