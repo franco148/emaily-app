@@ -80,8 +80,10 @@ npm install --save passport passport-google-oauth20
 - Installing dependency of stripe in backend side
   - npm install stripe --save
 
-- Installing a tools for parsing the request payloads
+- Installing a tool for parsing the request payloads
   - npm install --save body-parser
+
+- Installing a dependency for sendgrid tool.
 
 ##### Important Heroku Commands
 - heroku open: It will give us the address we need to use in google developer console.
