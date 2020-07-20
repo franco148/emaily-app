@@ -8,6 +8,10 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
 import reducers from './reducers';
+// ! Temporary import!!!
+// * we can test rest api call directly from the browser once we have these configuraitons
+import axios from "axios";
+window.axios = axios;
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
