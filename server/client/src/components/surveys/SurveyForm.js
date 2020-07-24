@@ -63,7 +63,7 @@ function validate(values) {
   //   errors.title = 'You must provide a body';
   // }
 
-  errors.recipients = validateEmails(recipients.emails || '');
+  errors.recipients = validateEmails(values.recipients || '');
 
   _.each(formFields, ({ name }) => {
     if (!values[name]) {
