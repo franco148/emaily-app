@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { reduxForm, updateSyncErrors } from "redux-form";
 import SurveyForm from "./SurveyForm";
 import SurveyFormReview from "./SurveyFormReview";
 
@@ -32,4 +33,7 @@ class SurveyNew extends Component {
   }
 }
 
-export default SurveyNew;
+// With this update, the form cleans its data
+export default reduxForm({
+  form: 'surveyForm'
+})(SurveyNew);
