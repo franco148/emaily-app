@@ -85,6 +85,8 @@ npm install --save passport passport-google-oauth20
 
 - Installing a dependency for sendgrid tool.
 
+- Installing redux-form inside client project: `npm install --save redux-form`
+
 ##### Important Heroku Commands
 - heroku open: It will give us the address we need to use in google developer console.
 
