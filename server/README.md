@@ -89,6 +89,9 @@ npm install --save passport passport-google-oauth20
 
 - ngrok: `npx ngrok http 5000`
 
+- npm install --save lodash path-parser
+- 
+
 ##### Important Heroku Commands
 - heroku open: It will give us the address we need to use in google developer console.
 
