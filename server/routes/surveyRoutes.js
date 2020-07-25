@@ -42,26 +42,46 @@ module.exports = app => {
     }
   });
 
+  // app.post('/api/surveys/webhooks', (req, res) => {
+  //   // console.log(req.body);
+  //   // res.send({});
+  //   // const events = _.map(req.body, (event) => {
+
+  //   const events = _.map(req.body, ({ email, url }) => {
+  //     // const pathname = new URL(event.url).pathname;
+  //     const pathname = new URL(url).pathname;
+  //     const p = new Path('/api/surveys/:surveyId/:choice');
+  //     // console.log(p.test(pathname));
+  //     const match = p.test(pathname);
+  //     if (match) {
+  //       return { email, surveyId: match.surveyId, choice: match.choice };
+  //     }
+  //   });
+
+  //   // console.log(events);
+  //   const compactEvents = _.compact(events);
+  //   const uniqueEvents = _.uniqBy(compactEvents, 'email', 'surveyId');
+  //   console.log('UNIQUE EVENTS', uniqueEvents);
+
+  //   res.send({});
+  // });
+
   app.post('/api/surveys/webhooks', (req, res) => {
-    // console.log(req.body);
-    // res.send({});
-    // const events = _.map(req.body, (event) => {
 
-    const events = _.map(req.body, ({ email, url }) => {
-      // const pathname = new URL(event.url).pathname;
-      const pathname = new URL(url).pathname;
-      const p = new Path('/api/surveys/:surveyId/:choice');
-      // console.log(p.test(pathname));
-      const match = p.test(pathname);
-      if (match) {
-        return { email, surveyId: match.surveyId, choice: match.choice };
-      }
-    });
+    const p = new Path('/api/surveys/:surveyId/:choice');
 
-    // console.log(events);
-    const compactEvents = _.compact(events);
-    const uniqueEvents = _.uniqBy(compactEvents, 'email', 'surveyId');
-    console.log('UNIQUE EVENTS', uniqueEvents);
+    const events = _.chain(req.body)
+      .map(req.body, ({ email, url }) => {
+        const match = p.test(new URL(url).pathname);
+        if (match) {
+          return { email, surveyId: match.surveyId, choice: match.choice };
+        }
+      })
+      .compact(events)
+      .uniqBy(compactEvents, 'email', 'surveyId')
+      .value();
+
+      console.log('UNIQUE EVENTS', events);
 
     res.send({});
   });
