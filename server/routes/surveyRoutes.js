@@ -70,18 +70,27 @@ module.exports = app => {
 
     const p = new Path('/api/surveys/:surveyId/:choice');
 
-    const events = _.chain(req.body)
+    _.chain(req.body)
       .map(req.body, ({ email, url }) => {
         const match = p.test(new URL(url).pathname);
         if (match) {
           return { email, surveyId: match.surveyId, choice: match.choice };
         }
       })
-      .compact(events)
-      .uniqBy(compactEvents, 'email', 'surveyId')
+      .compact()
+      .uniqBy('email', 'surveyId')
+      .each(({ surveyId, email, choice }) => {
+        Survey.updateOne({
+          _id: surveyId,
+          recipients: {
+            $elemMatch: { email: email, responded: false }
+          }
+        }, {
+          $inc: { [choice]: 1 },
+          $set: { 'recipients.$.responded': true }
+        }).exec();
+      })
       .value();
-
-      console.log('UNIQUE EVENTS', events);
 
     res.send({});
   });
