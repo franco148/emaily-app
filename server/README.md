@@ -87,6 +87,8 @@ npm install --save passport passport-google-oauth20
 
 - Installing redux-form inside client project: `npm install --save redux-form`
 
+- ngrok: `npx ngrok http 5000`
+
 ##### Important Heroku Commands
 - heroku open: It will give us the address we need to use in google developer console.
 
